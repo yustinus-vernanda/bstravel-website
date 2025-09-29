@@ -1,0 +1,137 @@
+---
+
+import DateTimePicker from '../components/DateTimePicker.jsx';
+---
+
+<div class=" isolate px-6 pt-26 lg:px-8">
+  <div aria-hidden="true" class="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80">
+    <div style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)" class="relative left-[calc(50%-11rem)] aspect-1155/678 w-144.5 -translate-x-1/2 rotate-30 bg-linear-to-tr from-[#ffa500] to-[#ff7f50] opacity-30 sm:left-[calc(50%-30rem)] sm:w-288.75"></div>
+  </div>
+  <div class="mx-auto max-w-4xl py-12 sm:py-2 lg:py-12">
+    <div class="text-center">
+      <h1 class="text-6xl font-semibold tracking-tight text-balance text-black sm:text-7xl italic">B<span class="text-orange-500">S</span> TRANS</h1>
+      
+      <p class="font-montserrat mt-2 text-sm font-medium text-pretty text-gray-500 sm:text-xl/8">Pesan kendaraan Anda dalam hitungan menit.<br/> Kami hadir untuk memastikan proses sewa mobil berjalan cepat, mudah, dan aman.<br/> Tim reservasi kami siap melayani Anda.</p>
+    </p>
+      
+    </div>
+  </div>
+  <div aria-hidden="true" class="absolute inset-x-0 top-[calc(100%-13rem)] -z-99 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]">
+    <div style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)" class="relative left-[calc(50%+3rem)] aspect-1155/678 w-144.5 -translate-x-1/2 bg-linear-to-tr from-[#ffa500] to-[#ff7f50] opacity-30 sm:left-[calc(50%+36rem)] sm:w-288.75"></div>
+  </div>
+  <form action="#" method="POST" class="mx-auto mt-16 max-w-xl sm:mt-4">
+    <div class="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
+      <div class="sm:col-span-2">
+      <label for="first-name" class="block text-sm font-semibold leading-6 text-gray-900">
+          First name
+        </label>
+        <div class="mt-2.5">
+          <input
+            type="text"
+            name="first-name"
+            id="first-name"
+            autoComplete="given-name"
+            class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+          />
+        </div>
+      </div>
+      <div class="sm:col-span-2">
+        <label for="location" class="block text-sm font-semibold leading-6 text-gray-900">
+          Lokasi tujuan
+        </label>
+        <div class="mt-2.5">
+          <input
+            type="text"
+            name="location"
+            id="location"
+            autoComplete="organization"
+            class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+          />
+        </div>
+      </div>
+      <div class="sm:col-span-2">
+        <label for="car-type" class="block text-sm font-semibold leading-6 text-gray-900">
+            Pilih Jenis Kendaraan:
+        </label>
+        
+        <div class="relative">
+            <select 
+                id="car-type" 
+                name="car-type"
+                class="
+                    appearance-none /* 1. Penting: Hilangkan panah default browser */
+                    block 
+                    w-full 
+                    py-2 
+                    pl-3 
+                    pr-10 /* Beri ruang untuk ikon panah */
+                    border 
+                    border-gray-300 
+                    bg-white 
+                    rounded-lg 
+                    shadow-sm 
+                    focus:outline-none 
+                    focus:ring-indigo-500 
+                    focus:border-indigo-500 
+                    sm:text-sm
+                    text-gray-900
+                "
+            >
+                <option value="" disabled selected>-- Pilih Opsi --</option>
+                <option value="avanza">AVANZA</option>
+                <option value="veloz">VELOZ</option>
+                <option value="elf">SUZUKI ELF</option>
+                <option value="ertiga">ERTIGA</option>
+                <option value="xl7">XL7</option>
+                <option value="xenia">XENIA</option>
+            </select>
+    
+            <div class="
+                pointer-events-none /* Penting: agar select tetap bisa diklik */
+                absolute 
+                inset-y-0 
+                right-0 
+                flex 
+                items-center 
+                px-2 
+                text-gray-700
+            ">
+                <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                    <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                </svg>
+            </div>
+        </div>
+    </div>
+      <div class="sm:col-span-2">
+        <label for="tanggal" class="block text-sm font-semibold leading-6 text-gray-900">
+          Tanggal Keberangkatan
+        </label>
+        <div class="mt-2.5">
+          <DateTimePicker client:load /> 
+        </div>
+      </div>
+      <div class="sm:col-span-2">
+        <label for="message" class="block text-sm font-semibold leading-6 text-gray-900">
+          Pesan
+        </label>
+        <div class="mt-2.5">
+          <textarea
+            name="message"
+            id="message"
+            rows={4}
+            class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+            defaultValue={''}
+          />
+        </div>
+      </div>
+    </div>
+    <div class="mt-10">
+      <button
+        type="submit"
+        class="block w-full rounded-md bg-orange-500 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-orange-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+      >
+        Booking Sekarang
+      </button>
+    </div>
+  </form>
+</div>

@@ -1,0 +1,96 @@
+---
+// --- Start Frontmatter (Script Block) ---
+// Definisikan data kontak dan sosial media di sini
+
+import { navigation } from '../data/social-icons.jsx';
+import { contactNavigation } from '../data/contact.jsx';
+import logo from '../assets/logo.png';
+
+const socialMedia = [...navigation];
+
+const contacts = [...contactNavigation];
+
+---
+
+<footer class="bg-white text-gray-900 py-12">
+  <div class="max-w-7xl mx-auto px-6 lg:px-8">
+    
+    {/* Menggunakan grid untuk 3 kolom utama, responsif */}
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+
+      {/* === Kolom 1: Logo === */}
+      <div class="flex justify-center md:justify-start items-start">
+        {/* Ganti ini dengan tag <img /> yang merujuk ke logo Anda */}
+        <div class="w-40 h-auto">
+            {/* Asumsi Anda memiliki logo di /public/logo.png */}
+            <img src={logo.src} alt="BS TRANS RENT CAR TRAVEL" class="max-w-full h-auto" />
+            </div>
+      </div>
+
+      {/* === Kolom 2: Hubungi Kami === */}
+      <div class="md:col-span-1">
+        <h3 class="text-xl font-semibold mb-6">Hubungi Kami</h3>
+        
+        {/* Daftar Kontak (Email, Telp, Website) */}
+        <ul class="space-y-4">
+          {contacts.map((contact) => (
+            <li class="flex items-center">
+              <a 
+                key={contact.name} 
+                href={contact.href} 
+                class="flex items-center text-sm text-gray-800 hover:text-orange-600 transition-colors"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <contact.icon class="w-6 h-6 mr-3 flex-shrink-0 text-orange-600" aria-hidden="true" />
+                <span class="font-medium">{contact.value}</span>
+              </a>
+            </li>
+          ))}
+
+          {/* Alamat (Dipisah dari list kontak ber-link) */}
+          <li class="flex items-start">
+            <a href="https://maps.app.goo.gl/MDPqYm6necbi4LV3A" class="flex items-center">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5 mr-3 flex-shrink-0 text-orange-600">
+                <path fill-rule="evenodd" d="M11.54 22.351l-8.682-8.683a.75.75 0 01-.19-.481v-7.65c0-.414.336-.75.75-.75h18.15c.414 0 .75.336.75.75v7.65c0 .167-.067.33-.19.48l-8.682 8.683a.75.75 0 01-1.06 0zM12 9a3 3 0 100 6 3 3 0 000-6z" clip-rule="evenodd" />
+            </svg>
+            <address class="not-italic text-gray-800 text-sm leading-relaxed">
+              Jl. Benda No.8, Benda, Kec. Benda, Kota Tangerang, Banten 19101
+            </address>
+          </a>
+          </li>
+        </ul>
+      </div>
+
+      {/* === Kolom 3: Sosial Media === */}
+      <div class="md:col-span-1">
+        <h3 class="text-xl font-semibold mb-6">Sosial Media</h3>
+        <ul class="space-y-4">
+          {socialMedia.map((item) => (
+            <li class="flex items-center">
+              <a 
+                key={item.name} 
+                href={item.href} 
+                class="flex items-center text-sm text-gray-800 hover:text-orange-600 transition-colors"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <item.icon class="w-6 h-6 mr-3 flex-shrink-0 text-orange-600 hover:text-orange-600" aria-hidden="true" />
+                <span class="font-medium">{item.value}</span>
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+    </div>
+
+    {/* Optional: Hak Cipta di bawah */}
+    <div class="border-t border-gray-800 mt-12 pt-6">
+      <p class="text-center text-xs text-gray-500">
+        &copy; {new Date().getFullYear()} BS TRANS. All rights reserved.
+      </p>
+    </div>
+
+  </div>
+</footer>

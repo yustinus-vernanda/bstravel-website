@@ -1,0 +1,29 @@
+---
+import '@fontsource-variable/rubik'
+import '@fontsource-variable/montserrat'
+import BaseHead from '../components/BaseHead.astro';
+import Footer from '../components/FooterHubungi.astro';
+import CardAll from '../components/CardAll.astro';
+import FloatingWhatsApps from '../components/FloatingWhatsApps.astro';
+import Header from '../components/Header.astro';
+import HeroArmada from '../components/HeroArmada.astro';
+import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
+import Stats from '../components/Stats.astro';
+import ContactArmada from '../components/ContactArmada.astro';
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+	</head>
+	<body>
+		<Header/>
+		<HeroArmada/>
+        <CardAll/>
+        <ContactArmada/>
+		<FloatingWhatsApps/>
+		<Footer/>
+	</body>
+
+</html>
