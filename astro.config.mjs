@@ -9,7 +9,7 @@ import react from '@astrojs/react';
 const REPO_NAME = 'bstravel-website'; 
 // https://astro.build/config
 export default defineConfig({
-    base: '/bstravel-website/',
+    // base: '/bstravel-website/',
     site: 'https://yustinus-vernanda.github.io/',
     integrations: [mdx(), sitemap(), react(),],
     vite: {
