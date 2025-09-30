@@ -11,7 +11,7 @@ import logo from '../assets/logo.png';
 		</a>
 	  </div>
 	  <div class="flex lg:hidden">
-		<button type="button" command="show-modal" commandFor="mobile-menu" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-orange-500 z-9999">
+		<button type="button" data-command="show-modal" data-commandFor="mobile-menu" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-orange-500 z-9999">
 		  <span class="sr-only">Open main menu</span>
 		  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" data-slot="icon" aria-hidden="true" class="size-10">
 			<path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round" stroke-linejoin="round" />
@@ -54,7 +54,7 @@ import logo from '../assets/logo.png';
 				<span class="sr-only">BS Trans</span>
 				<img src={logo.src} alt="" class="h-8 w-auto" />
 			  </a>
-			  <button type="button" command="close" commandfor="mobile-menu" class="-m-2.5 rounded-md p-2.5 text-orange-500">
+			  <button type="button" data-command="close" data-commandfor="mobile-menu" class="-m-2.5 rounded-md p-2.5 text-orange-500">
 				<span class="sr-only">Close menu</span>
 				<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" data-slot="icon" aria-hidden="true" class="size-6">
 				  <path d="M6 18 18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" />
